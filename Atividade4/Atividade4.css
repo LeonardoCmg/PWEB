@@ -1,0 +1,91 @@
+header{
+    background-color: rgb(255, 136, 0);
+    color: aliceblue;
+    text-align: center;
+    padding: 20px 0;}
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #acec9d;
+        color: #010101;
+        margin: 0;
+        padding: 0;
+}
+
+.container{
+    display: flex; 
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;rgb(253, 255, 182);
+    gap: 10px
+}
+.card{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.card h3{
+    margin-top: 0;
+}
+.card h3 a{
+    text-decoration: none;
+    color: #2600ff;
+    font-size: 1.2em;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.card p {
+    color: #666;
+}
+figure{
+    margin: 20px 0;
+    text-align: center;
+}
+
+figure img{
+    max-width: 100%;
+    height: auto;
+}
+
+figure figcaption {
+    font-size: 0.8em;
+    color: #666;}
+
+    section {
+        padding: 20px;
+        background-color: white;
+        margin: 20px auto;
+        max-width: 800px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .search-bar {
+        display: flex;
+        align-items: center;
+    }
+    .search-bar input[type="text"] {
+        padding: 5px;
+        font-size: 14px;
+    }
+    .search-bar button {
+        padding: 5px 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
