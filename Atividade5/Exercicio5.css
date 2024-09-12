@@ -1,0 +1,93 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div {
+    width: 500px;
+    height: 500px;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+div h2 {
+    color: white;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 420px) {
+    div {
+        background-color: gray;
+    }
+
+    div h2::before {
+        content: "Cinza";
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 768px) {
+    div {
+        background-color: orange;
+    }
+
+    div h2::before {
+        content: "Laranja";
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    div {
+        background-color: #ff0084;
+    }
+
+    div h2::before {
+        content: "Rosa";
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1080px) {
+    div {
+        background-color: red;
+    }
+
+    div h2::before {
+        content: "Vermelho";
+    }
+}
+
+@media only screen and (min-width: 1081px) and (max-width: 1366px) and (max-width: 1366px) {
+    div {
+        background-color: purple;
+    }
+
+    div h2::before {
+        content: "Roxo";
+    }
+}   
+
+@media only screen and (min-width: 1367px) and (max-width: 1920px) {
+    div {
+        background-color: yellow;
+    }
+
+    div h2::before {
+        content: "Amarelo";
+    }
+}   
+
+@media only screen and (min-width: 1921px) {
+    div {
+        background-color: rgb(61, 187, 78);
+    }
+
+    div h2::before {
+        content: "Verde";
+    }
+}
