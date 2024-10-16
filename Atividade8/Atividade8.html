@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Opinião</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pesquisa de Opinião do Filme</h1>
+        <form id="formPesquisa">
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" required><br><br>
+            
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" required>
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+            </select><br><br>
+            
+            <label for="opiniao">Opinião:</label>
+            <select id="opiniao" required>
+                <option value="4">Ótimo</option>
+                <option value="3">Bom</option>
+                <option value="2">Regular</option>
+                <option value="1">Péssimo</option>
+            </select><br><br>
+            
+            <button type="button" onclick="adicionarPessoa()">Adicionar Pessoa</button>
+        </form>
+        <div class="result">
+            <h2>Resultados da Pesquisa</h2>
+            <p id="mediaIdade"></p>
+            <p id="idadeMax"></p>
+            <p id="idadeMin"></p>
+            <p id="totalPessimo"></p>
+            <p id="percentualOtimoBom"></p>
+            <p id="totalSexo"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
