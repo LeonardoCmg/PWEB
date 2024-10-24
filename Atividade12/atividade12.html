@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade12</title>
+
+    <script>
+        // Função construtora
+        function Retangulo(x, y) {
+            this.base = x;
+            this.altura = y;
+            this.calcularArea = function() {
+                return this.base * this.altura;
+            };
+        }
+
+        function calcularArea() {
+            var base = parseFloat(document.getElementById("base").value);
+            var altura = parseFloat(document.getElementById("altura").value);
+            const obj = new Retangulo(base, altura);
+            document.getElementById("resposta").innerHTML = obj.calcularArea();
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Calcular Área</h1>
+    <label for="base">Base: </label>
+    <input type="text" id="base" name="base" />
+    <br />
+    <label for="altura">Altura:</label>
+    <input type="text" id="altura" name="altura" />
+    <br />
+    <button onclick="calcularArea()">Calcular Área</button>
+    <br />
+    <label for="resposta">Resposta:</label>
+    <p id="resposta"></p>
+
+
+</body>
+</html>
