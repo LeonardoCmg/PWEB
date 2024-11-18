@@ -1,6 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     let tarefas = [];
 
+    // Função para carregar as tarefas do LocalStorage
+    const loadTasks = () => {
+        const storedTasks = localStorage.getItem('tarefas');
+        if (storedTasks) {
+            tarefas = JSON.parse(storedTasks);
+            console.log('Tarefas carregadas do LocalStorage:', tarefas); // Log para depuração
+        }
+    };
+
+    // Função para salvar as tarefas no LocalStorage
+    const saveTasks = () => {
+        localStorage.setItem('tarefas', JSON.stringify(tarefas));
+        console.log('Tarefas salvas no LocalStorage:', tarefas); // Log para depuração
+    };
+
     const showForm = (columnId) => {
         document.getElementById('taskFormContainer').style.display = 'block';
         document.getElementById('taskForm').dataset.columnId = columnId;
@@ -42,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tarefas.push(tarefa);
         }
 
+        saveTasks();
         renderTasks();
         closeForm();
     };
@@ -62,23 +78,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const moveTask = (id, newColumnId) => {
         tarefas = tarefas.map(t => t.id === id ? { ...t, columnId: newColumnId } : t);
+        saveTasks();
         renderTasks();
     };
 
     const moveTaskBack = (id, prevColumnId) => {
         tarefas = tarefas.map(t => t.id === id ? { ...t, columnId: prevColumnId } : t);
+        saveTasks();
         renderTasks();
     };
 
     const deleteTask = (id) => {
         if (confirm('Você tem certeza que deseja excluir esta tarefa?')) {
             tarefas = tarefas.filter(t => t.id !== id);
+            saveTasks();
             renderTasks();
         }
     };
 
     const concludeTrip = (id) => {
         tarefas = tarefas.filter(t => t.id !== id);
+        saveTasks();
         renderTasks();
         alert("Viagem concluída!");
     };
@@ -150,6 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (newColumnId !== task.querySelector('input[type="hidden"]').value) {
                 tarefas = tarefas.map(t => t.id === taskId ? { ...t, columnId: newColumnId } : t);
+                saveTasks();
                 renderTasks();
             }
         });
@@ -164,4 +185,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.moveTask = moveTask;
     window.moveTaskBack = moveTaskBack;
     window.concludeTrip = concludeTrip;
+
+    // Carregar tarefas ao carregar a página
+    loadTasks();
+    renderTasks();
 });
+
