@@ -15,7 +15,7 @@ function adicionarPessoa() {
     
     calcularResultados();
 }
-console.log("Implementa teste final de integração [CU-86a8wjw6z]");
+console.log("Teste final com ClickUp [CU-OY9J1FVOVIFCH3G]");
 
 
 
