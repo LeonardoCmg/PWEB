@@ -15,6 +15,10 @@ function adicionarPessoa() {
     
     calcularResultados();
 }
+console.log("Teste final com ClickUp [CU-OY9J1FVOVIFCH3G]");
+
+
+
 
 function calcularResultados() {
     if (pessoas.length === 0) return;

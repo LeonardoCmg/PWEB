@@ -10,6 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // login.js
+console.log("Componente de login criado.");
+
+
+
+
     // Função para salvar as tarefas no LocalStorage
     const saveTasks = () => {
         localStorage.setItem('tarefas', JSON.stringify(tarefas));
