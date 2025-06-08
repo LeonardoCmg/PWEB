@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    console.log("Nova tentativa de integração com ClickUp");
+    // login.js
+console.log("Componente de login criado.");
+
 
 
 
