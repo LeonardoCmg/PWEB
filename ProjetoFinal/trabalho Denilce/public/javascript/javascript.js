@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    console.log("Teste de integração com ClickUp");
+
+
     // Função para salvar as tarefas no LocalStorage
     const saveTasks = () => {
         localStorage.setItem('tarefas', JSON.stringify(tarefas));
