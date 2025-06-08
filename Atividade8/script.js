@@ -16,6 +16,11 @@ function adicionarPessoa() {
     calcularResultados();
 }
 
+// Alteração de teste para integração ClickUp
+console.log("Teste com ClickUp [CU-86a8wjw6z]");
+
+
+
 function calcularResultados() {
     if (pessoas.length === 0) return;
 
